@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 
-body{overflow-x:hidden;font-family:'Roboto Slab','Helvetica Neue',Helvetica,Arial,sans-serif}
+body{overflow-x:hidden;}
 p{line-height:1.75}
 a{color:#fed136}a:hover{color:#fec503}
 .text-primary{color:#fed136!important}
@@ -31,8 +31,8 @@ section h3.section-subheading{font-size:16px;font-weight:400;font-style:italic;m
     font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
     }
 #mainNav .navbar-brand{
-    color:#fed136;
-    font-family:'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive
+    color:#fff;
+    /*font-family:'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive*/
 }
 #mainNav .navbar-brand.active,#mainNav .navbar-brand:active,#mainNav .navbar-brand:focus,#mainNav .navbar-brand:hover{color:#fec503}
 #mainNav .navbar-nav .nav-item .nav-link{
@@ -67,7 +67,7 @@ section h3.section-subheading{font-size:16px;font-weight:400;font-style:italic;m
 
 header.masthead{
     text-align:center;
-    color:#fff;background-image:url(../img/header-bg.jpg);
+    color:#101010;background-image:url(../img/header-bg.jpg);
     background-repeat:no-repeat;
     background-attachment:scroll;
     background-position:center center;
@@ -88,7 +88,7 @@ header.masthead .intro-text .intro-lead-in{
 
  input[type=text] {
     margin: 30px;
-    width: 130px;
+    width: 300px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
