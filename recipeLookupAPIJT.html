@@ -95,8 +95,12 @@
                     // Creating and storing recipe in a paragraph
                     var recipeList = $("<p>").text("Recipe: " + results[i].recipe.label);
 
+                    // Creating and storing nutrient list in a paragraph
+                    var nutrientList = $("<p>").text(results[i].recipe.healthLabels);
+
                     // Appending the paragraph and image tag to the recipeDiv
                     recipeDiv.append(recipeList);
+                    recipeDiv.append(nutrientList);
                     recipeDiv.append(recipeImage);
 
                     // Creating element for ingredients
@@ -104,6 +108,7 @@
                     for (var j = 0; j < ingredientInfo.length; j++) {
                         recipeDiv.append($("<p>").text(ingredientInfo[j]));
                     }
+
 
 
                     // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
