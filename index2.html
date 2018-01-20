@@ -23,10 +23,6 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   </head>
 
   <body id="page-top">
@@ -46,7 +42,6 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#savedRecipes">savedRecipes</a>
             </li>
-
           -->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#results">results</a>
@@ -56,14 +51,12 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
-
           -->
 
           <!-- Team nav bar is optional
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#team">Team</a>
             </li>
-
           -->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -77,17 +70,15 @@
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-           <form id="search-box">
-                <div class="input-group">
-                   <input type="text" class="form-control" placeholder="Search" name="search" id="search">
-                     <div class="input-group-btn">
-                       <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                     </div>
-                  </div>
-             </form>
+          <form>
+            <input type="text" name="search" placeholder="Search...">
+          </form>
           <div class="intro-lead-in">Let's Get Cooking!</div>
           <div class="intro-heading text-uppercase">What's For Dinner?</div>
-          </div>
+
+          
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#savedRecipes">Find My Dish!</a>
+        </div>
       </div>
     </header>
 
@@ -128,7 +119,6 @@
         </div>
       </div>
     </section>
-
   -->
 
     <!-- results Grid -->
@@ -140,9 +130,22 @@
             <h3 class="section-subheading text-muted">Let's break some eggs...</h3>
           </div>
         </div>
-        <div id="recipes" class="row">
-          
-          <!-- <div class="col-md-4 col-sm-6 results-item">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 results-item">
+            <a class="results-link" data-toggle="modal" href="#resultsModal1">
+              <div class="results-hover">
+                <div class="results-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/results/01-thumbnail.jpg" alt="">
+            </a>
+            <div class="results-caption">
+              <h4>Search Result 1</h4>
+              <p class="text-muted">Flavor Text</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 results-item">
             <a class="results-link" data-toggle="modal" href="#resultsModal2">
               <div class="results-hover">
                 <div class="results-hover-content">
@@ -210,7 +213,7 @@
             <div class="results-caption">
               <h4>Search Result 6</h4>
               <p class="text-muted">All out of Flavor Text</p>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>
@@ -296,11 +299,9 @@
         </div>
       </div>
     </section>
-
   -->
 
     <!-- Team Info optional
-
     <section class="bg-light" id="team">
       <div class="container">
         <div class="row">
@@ -415,7 +416,6 @@
         </div>
       </div>
     </section>
-
     -->
 
     <!-- Clients
@@ -445,7 +445,6 @@
         </div>
       </div>
     </section>
-
   -->
 
     <!-- Contact -->
@@ -739,8 +738,6 @@
       </div>
     </div>
 
-
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -754,10 +751,6 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
-
-    <!-- Api Javascript -->
-
-    <script src="apigtest.js"></script>
 
   </body>
 
