@@ -78,6 +78,13 @@
             }).done(function(response) {
                 console.log(response);
 
+                $.ajax({
+                    url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&type=restaurant&keyword=cruise&key=AIzaSyDSYIY3_YzWDSDew4jVIB5TVYty8-wESxA",
+                    method: "GET"
+                }).done(function(response) {
+                    console.log(response);
+                });
+
                 // Storing the data from the AJAX request in the results variable
                 var results = response.hits;
 
@@ -98,8 +105,13 @@
                     // Creating and storing nutrient list in a paragraph
                     var nutrientList = $("<p>").text(results[i].recipe.healthLabels);
 
+                    //Prep instructions
+                    var prepInstructions = $("<p>").text(results[i].recipe.url);
+
+
                     // Appending the paragraph and image tag to the recipeDiv
                     recipeDiv.append(recipeList);
+                    recipeDiv.append(prepInstructions);
                     recipeDiv.append(nutrientList);
                     recipeDiv.append(recipeImage);
 
@@ -119,9 +131,10 @@
 
             // Prevents the page from reloading after the AJAX call.
             event.preventDefault();
-
         });
     </script>
+
+
 
 </body>
 
