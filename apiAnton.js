@@ -67,6 +67,8 @@
         $("#search-box").submit(function(event) {
             // Get the search data from the form
             var searchText = $("#search").val();
+            var recipeName = $(".recipe-name");
+            recipeName.html("Matching Results For " + searchText);
             // Debugging, log what we are looking for
             console.log("Searching for " + searchText);
             // Performing GET requests to the recipe API and logging the responses to the console    
@@ -79,23 +81,31 @@
                 var results = response.hits;
                 for (var i = 0; i < results.length; i++) {
                     // Creating and storing a div tag
-                    var recipeDiv = $("#recipe-ingredients");
+                    var recipeDiv = $("<div>");
                     // Creating and storing an image tag
-                    var recipeImage = $(".recipe-one");
+                    var recipeImage = $(".recipe-image");                   
                     // Setting the src attribute of the image to a property pulled off the result item
                     recipeImage.attr("src", results[i].recipe.image);
                     // Creating and storing recipe in a paragraph
-                    var recipeList = $("<p>").text("Recipe: " + results[i].recipe.label);
+                    var recipeList = $("#recipe-label").text("Recipe: " + results[i].recipe.label);
+                    // Creating and storing nutrient list in a paragraph
+                    var nutrientList = $("#recipe-nutrition").text(results[i].recipe.healthLabels);
+                    //Prep instructions
+                    var prepInstructions = $("#recipe-url").text(results[i].recipe.url);
                     // Appending the paragraph and image tag to the recipeDiv
-                    recipeDiv.append(recipeList);
+
                     recipeDiv.append(recipeImage);
+                    recipeDiv.append(recipeList);
+                    recipeDiv.append(prepInstructions);
+                    recipeDiv.append(nutrientList);
+                    
                     // Creating element for ingredients
                     var ingredientInfo = results[i].recipe.ingredientLines;
                     for (var j = 0; j < ingredientInfo.length; j++) {
-                        recipeDiv.append($(".text-muted").text(ingredientInfo[j]));
+                        recipeDiv.append($("#recipe-ingredients").text(ingredientInfo[j]));
                     }
                     // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
-                    $("#recipe-here").prepend(recipeDiv);
+                    $("#services").prepend(recipeDiv);
                 }
             });
             // Prevents the page from reloading after the AJAX call.

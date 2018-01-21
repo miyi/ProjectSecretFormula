@@ -68,6 +68,7 @@
         <div class="intro-text">
           <div class="intro-lead-in">Welcome To Our Recipe Finder!</div>
           <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+
     <!--search form bootstrap -->
     <div class="container">
         <div class="row">
@@ -90,22 +91,17 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Matching results for 
-              <span class="search-value"></span>
-            </h2>
-            <h3 class="section-subheading text-muted"></h3>
+            <h4 class="section-heading text-uppercase">
+              <span class="recipe-name"></span>
+            </h4>
           </div>
         </div>
-        <div class="row text-center">
 
-          <div class="col-md-4">
-            <img class="recipe-one">
+        <div class="row" id="recipe-here">
+          <div class="col-md-4 text-center" id="recipe-label">
+            <img class="recipe-image">
             </img>
-            <h4 class="service-heading"></h4>
-            <p class="text-muted"></p>
           </div>
-
-
 
           <div class="col-md-4" id="recipe-ingredients">
 
@@ -117,7 +113,7 @@
             <h4 class="service-heading">Responsive Design</h4>
             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p> -->
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 text-center" id="recipe-nutrition">
             <!-- <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
@@ -126,6 +122,8 @@
             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p> -->
           </div>
         </div>
+
+      <div class="row" id="recipe-url"></div>
       </div>
     </section>
 
@@ -630,7 +628,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase"></h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
@@ -719,11 +717,11 @@
     </div>
 
     <!-- Bootstrap core JavaScript -->
- <!--    <script src="vendor/jquery/jquery.min.js"></script> -->
+    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Contact form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
