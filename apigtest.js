@@ -96,6 +96,8 @@
                         '</div>' +
                     '</div>');
                     $('#recipes').append(recipeDiv);
+
+                    
 /*                    console.log(recipeDiv)
                     // Creating and storing an image tag
                     var recipeImage = $("<img>");
