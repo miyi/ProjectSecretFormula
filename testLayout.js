@@ -1,6 +1,7 @@
 $("#search-box").submit(function(event) {
 	// Get the search data from the form
 	var searchText = $("#search").val();
+
   var maxResults = 15;
 	// Debugging, log what we are looking for
 	// console.log("Searching for " + searchText);
@@ -27,7 +28,7 @@ $("#search-box").submit(function(event) {
 					var il = $("<il>").text(line).addClass("list-group-item");
 					list.append(il);
 				});
-				var btn = $("<a></a>").addClass("btn btn-primary").attr("href", recipe.recipe.url).attr("target", "_blank").text("more details");
+				var btn = $("<a></a>").addClass("btn btn-primary").attr("href", recipe.recipe.url).attr("target", "_blank").text("Find out more");
 
 				cardDiv.append(image).append(cardTitle).append(list).append(btn);
 				columnDiv.append(cardDiv);
